@@ -1,7 +1,9 @@
 import { sketch as sketchRGB } from './assets/sketch/rgb.js';
+import { sketch as sketchNodes } from './assets/sketch/nodes.js';
 
-const sketch = {
+const sketches = {
   rgb: sketchRGB,
+  node: sketchNodes,
 }
 
 let inst;
@@ -14,7 +16,8 @@ document.querySelectorAll('button[data-sketch]')
       inst.remove();
       inst = null;
     }
-    const sketch = sketch[e.target.dataset.sketch];
+    console.log('Loading sketch for', e.target.dataset.sketch);
+    const sketch = sketches[e.target.dataset.sketch];
     if (sketch) inst = new p5(sketch);
   })
 });
