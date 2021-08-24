@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+  margin: 0;
+}
+.nav {
+  position: fixed;
+  top: 6px;
+  left: 6px;
+}
+canvas {
+  object-fit: cover;
+}
