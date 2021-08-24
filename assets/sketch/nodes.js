@@ -5,7 +5,7 @@ export const sketch = p => {
 
   const NODES = 200;
   let distLine;
-  let speed = 0.1;
+  let speed = 0.2;
   
   let nodes;
   let state = 0;
@@ -59,15 +59,15 @@ export const sketch = p => {
             dist = Math.sqrt(distX * distX + distY * distY);
             if (dist < distLine) {
               let f = (distLine - dist) / distLine;
-              if (state === 0) {
+              if (state === 0) { // debug
                 p.stroke(0, 0, 100, f);
                 p.line(nodes[i].x, nodes[i].y, nodes[j].x, nodes[j].y);
                 p.fill(0, 0, f, 1)
                 p.circle(nodes[j].x, nodes[j].y, dist*0.5);
-              } else if (state === 1) {
+              } else if (state === 1) { // lines
                 p.stroke(p.frameCount % hueMax, 100, 100, f);
                 p.line(nodes[i].x, nodes[i].y, nodes[j].x, nodes[j].y);
-              } else if (state === 2) {
+              } else if (state === 2) { // points
                 p.noStroke();
                 p.fill(p.frameCount % hueMax, 100, 100, f*0.1);
                 p.circle(nodes[i].x, nodes[i].y, distLine - dist);

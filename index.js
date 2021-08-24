@@ -1,9 +1,11 @@
 import { sketch as sketchRGB } from './assets/sketch/rgb.js';
 import { sketch as sketchNodes } from './assets/sketch/nodes.js';
+import { sketch as sketchPixel } from './assets/sketch/pixel.js';
 
 const sketches = {
   rgb: sketchRGB,
   node: sketchNodes,
+  px: sketchPixel,
 }
 
 let inst;
