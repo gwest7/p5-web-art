@@ -17,3 +17,7 @@ Basic points with velocity and virtual weights. Tap the screen to change between
 ## Shader
 
 Colour warp. Parameters change with mouse position. Left = high saturation, right = low saturation, top = bright, bottom = dark. Click the mouse to shift the hue. (Saturation is also inverted per pixel.)
+
+## Flower
+
+100 petals growing outwards. Each changing slightly over time.
